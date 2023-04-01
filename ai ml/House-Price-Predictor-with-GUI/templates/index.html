@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>House Price Predictor</title>
+	
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body class="bg-light">
+	<div style="background-color:#eaeaea;color: black;">
+    <h1><center>House Price Predictor</center></h1>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+	<nav class="navbar navbar-expand-lg bg-light">
+		<div class="container-fluid" style="background-color: #9CB4CC;color:black">
+				<a class="navbar-brand" href="/" >
+				  House Price Predictor
+				</a>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+			  <li class="nav-item">
+				<a class="nav-link active" aria-current="page" href="/about">About</a>
+			  </li>
+			</ul>
+		  </div>
+		</div>
+	</nav>
+	<div class="card">
+		<div class="card-body">
+		<form method="post" accept-charset="utf-8" class="row g-3">
+			<div class="col-md-6">
+				<label for="floor">No. of Floors :</label>
+				<input class="form-control" style="background-color:#FFFFDE;" type="text" name="floor" id="floor">
+			</div>
+			<div class="col-md-6">
+				<label for="visited">No. of Times Visited :</label>
+				<input class="form-control"  style="background-color:#FFFFDE;" type="text" name="visited" id="visited">
+			</div>
+			<div class="col-md-6">
+				<label for="basement">Basement Area :</label>
+				<input class="form-control"  style="background-color:#FFFFDE;" type="text" name="basement" id="basement">
+			</div>
+			<div class="col-md-6">
+				<label for="age">Age of House(in Years) :</label>
+				<input class="form-control"  style="background-color:#FFFFDE;" type="text" name="age" id="age">
+			</div>
+			<div class="col-md-6">
+				<label for="zipcode">Zipcode :</label>
+				<input class="form-control"  style="background-color:#FFFFDE;" type="text" name="zipcode" id="zipcode">
+			</div>
+			<div class="col-md-6">
+				<label for="latitude">Latitude :</label>
+				<input class="form-control"  style="background-color:#FFFFDE;" type="text" name="latitude" id="latitude">
+			</div>
+			<div class="col-md-6">
+				<label for="longitude">Longitude :</label>
+				<input class="form-control"  style="background-color:#FFFFDE;" type="text" name="longitude" id="longitude">
+			</div>
+			<div class="col-md-6">
+				<label for="living">Living Area After Renovation(in Sqft.) :</label>
+				<input class="form-control"  style="background-color:#FFFFDE;" type="text" name="living" id="living">
+			</div>
+			<div class="col-md-6">
+				<label for="lotarea">Lot Area After Renovation(in Sqft.) :</label>
+				<input class="form-control"  style="background-color:#FFFFDE;" type="text" name="lotarea" id="lotarea">
+			</div>
+			<div class="col-md-6">
+				<label for="yrsreno">Years Since Renovation :</label>
+				<input class="form-control"  style="background-color:#FFFFDE;" type="text" name="yrsreno" id="yrsreno">
+			</div>
+			<div class="col-md-6">
+				<label for="bathroom">No. of Bathrooms :</label>
+				<input class="form-control"  style="background-color:#FFFFDE;" type="text" name="bathroom" id="bathroom">
+			</div>
+			<div class="col-md-6">
+				<label for="bedroom">No. of Bedrooms :</label>
+				<input class="form-control" style="background-color:#FFFFDE;" type="text" name="bedroom" id="bedroom">
+			</div>
+			<div class="col-md-6">
+				<label for="view">Waterfront View :</label>
+				<select name="view" id="view"  style="background-color:#FFFFDE;" class="form-select" aria-label="Default select example">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</select>
+			</div>
+			<div class="col-md-6">
+				<label for="condition">Condition of the House :</label>
+				<select name="condition" id="condition"  style="background-color:#FFFFDE;" class="form-select" aria-label="Default select example" >
+					<option selected>Select Condition of the House</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+			<div class="col-md-6">
+				<label for="grade">Overall Grade :</label>
+				<select name="grade" id="grade"  style="background-color:#FFFFDE;" class="form-select" aria-label="Default select example" >
+					<option selected>Select Grade</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</select>
+			</div>
+			<div class="col-md-6">
+				<label for="everreno">Ever Renovated :</label>
+				<select name="everreno" id="everreno"  style="background-color:#FFFFDE;" class="form-select" aria-label="Default select example" >
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+			</div>
+			<div class="col-md-12">
+				<input class="btn btn-primary " type="submit"  onclick="send_data()" value="Predict Price">
+			</div>
+			
+		</form>
+		<br>
+		<div class="col-md-12" style="text-align:center ;">
+				<h3><span id="prediction"></span></h3>
+		</div>
+	</div>
+	</div>
+</div>
+<script>
+	function form_handler(event){
+		event.preventDefault();
+	}
+
+	function send_data()
+	{
+		document.querySelector('form').addEventListener("submit",form_handler);
+		var fd=new FormData(document.querySelector('form'));
+
+		var xhr= new XMLHttpRequest();
+		xhr.open('POST','/predict',true);
+		document.getElementById("prediction").innerHTML="Wait Preditiong Price!......";
+
+		xhr.onreadystatechange =function(){
+			if(xhr.readyState == XMLHttpRequest.DONE){
+				document.getElementById("prediction").innerHTML="Prediction: $"+xhr.responseText;
+			}
+		};
+
+		xhr.onload = function(){};
+		xhr.send(fd);
+	}
+</script>
+  </body>
+</html>
